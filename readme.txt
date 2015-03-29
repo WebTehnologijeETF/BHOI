@@ -1,0 +1,1 @@
+Koristene HTML5 kontrole su podrzane na svim popularnijim web-browserima.

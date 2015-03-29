@@ -1,0 +1,416 @@
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web&subset=latin);
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-size: 100%;
+vertical-align: baseline;
+background: transparent;
+}
+
+#slideshow {
+background-clip: border-box;
+background-color: #000;
+background-image: url(../images/slideshow.png);
+background-origin: padding-box;
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+color: #fff;
+border-top-style: solid;
+border-top-color: white;
+height: 500px;
+border-bottom: 3px solid #FFF;
+}
+
+#menu {
+
+position: relative;
+margin-top: 0px;
+width: auto;
+background-image: url(../images/menu_bg.png);
+background-repeat: repeat-x;
+}
+
+
+#menu img {
+margin-left: 4%;
+width: 14%;
+height: auto;
+}
+
+#menu ul {
+  
+list-style: none;
+  
+margin: 0;
+  
+padding: 0;
+  
+line-height: 1;
+  
+display: inline;
+  
+margin-right: 4%;
+float:right;
+}
+
+
+#menu ul:after {
+  
+content: " ";
+  
+display: block;
+  
+font-size: 0;
+  
+height: 0;
+  
+clear: both;
+  
+visibility: hidden;
+
+}
+
+
+#menu ul li {
+ display: inline-block;
+  
+padding: 0;
+  
+margin: 0;
+
+}
+
+
+#menu.align-right ul li {
+  
+float: right;
+
+}
+
+
+#menu.align-center ul {
+  
+text-align: center;
+
+}
+
+
+#menu ul li a {
+  
+color: #ffffff;
+ text-decoration: none;
+  
+display: block;
+
+padding-top: 20%;
+padding-left: 7px;
+
+
+padding-bottom: 10%;
+padding-right: 7px;
+
+
+font-family: 'Titillium Web', sans-serif;
+text-transform: uppercase;
+  
+font-size: 1.5vw;
+  
+position: relative;
+  
+transition: color .25s;
+
+}
+
+
+#menu ul li a:hover {
+  
+color: #FFCC33;
+
+}
+
+
+#menu ul li a:hover:before {
+  
+width: 100%;
+
+}
+
+#menu ul li a:before {
+  
+content: "";
+display: block;
+  
+position: absolute;
+  
+left: 0;
+  
+bottom: 0;
+  
+height: 3px;
+  
+width: 0px;
+  
+background: #FFCC33;
+  
+transition: width .25s;
+
+}
+
+
+#menu ul li.last > a:after, 
+#menu ul li:last-child > a:after {
+ 
+content: "";
+display: block;
+
+}
+
+
+#menu ul li.active a {
+ 
+color: #FFCC33;
+}
+
+
+#menu ul li.active a:before {
+  
+width: 100%;
+
+}
+
+#menu.align-right li.last > a:after, 
+#menu.align-right li:last-child > a:after {
+  
+display: block;
+
+}
+
+
+#menu.align-right li:first-child a:after {
+  
+display: none;
+
+}
+
+
+#main_wrapper {
+background-clip: border-box;
+background-color: #000;
+background-image: url(../images/latest.png);
+background-origin: padding-box;
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+color: #fff;
+}
+
+#main_wrapper h1 {
+font-family: 'Titillium Web', sans-serif;
+font-size: 32pt;
+text-transform: uppercase;
+padding-top: 18px;
+ 
+margin-left: 12.8%;
+}
+
+#news, #contests, #projects, #gallery, #about, #contact {
+width:80%;
+margin-left:auto;
+margin-right:auto;
+background: transparent;
+}
+
+#news table {
+width: 95%;
+margin-left: 2.5%;
+}
+
+#news table td {
+padding: 10px;
+}
+
+
+#news img {
+width: 100%;
+height: auto;
+}
+
+a.more {
+float:right;
+font-family: 'Titillium Web', sans-serif;
+font-size: 14pt;
+text-transform: uppercase;
+color: #FFCC33;
+margin-top: 10px;
+}
+
+a.more:hover {
+color: #0F4B95;
+}
+
+h2.title {
+font-family: 'Titillium Web', sans-serif;
+font-size: 22pt;
+color: #FFCC33;
+float: left;
+}
+
+h3.author {
+font-family: 'Titillium Web', sans-serif;
+font-size: 12pt;
+color: #0F4B95;
+float: right;
+margin-top: 16px;
+}
+
+p.text {
+font-family: 'Titillium Web', sans-serif;
+font-size: 12pt;
+color: #FFF;
+text-align: justify;
+}
+
+#banners {
+padding-left: 3%;
+}
+
+#banners img {
+width: 13.6%;
+height: auto;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+#banners img:hover {
+opacity: 0.5;
+}
+
+#footer {
+background-clip: border-box;
+background-color: #000;
+background-image: url(../images/latest.png);
+background-origin: padding-box;
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+color: #fff;
+text-align: center;
+}
+
+#footer h1 {
+font-family: 'Titillium Web', sans-serif;
+font-size: 18pt;
+text-transform: uppercase;
+padding: 20px;
+ 
+}
+
+#contests table {
+border: 1px solid #FFF;
+margin-left: auto;
+margin-right: auto;
+margin-top: 18px;
+}
+
+#contests table tr {
+border: 1px solid #FFF;
+}
+
+#contests table td {
+border: 1px solid #FFF;
+text-align: center;
+font-family: 'Titillium Web', sans-serif;
+color: #FFF;
+font-size: 12pt;
+}
+
+#contests table caption {
+font-family: 'Titillium Web', sans-serif;
+color: #FFF;
+font-size: 18pt;
+border: 1px solid #FFF;
+}
+
+#contests table th {
+font-family: 'Titillium Web', sans-serif;
+color: #FFF;
+font-size: 12pt;
+text-transform: uppercase;
+border: 1px solid #FFF;
+width: 25%;
+}
+
+a.link {
+color: #FFCC33;
+}
+
+a.link:hover {
+color: #0F4B95;
+}
+
+#projects p, #gallery p, #about p {
+font-family: 'Titillium Web', sans-serif;
+color: #FFF;
+font-size: 12pt;
+text-align: justify;
+padding-top: 10px;
+padding-bottom: 32px;
+}
+
+#contact [type=text] {
+width: 200px;
+height: 30px;
+font-family: 'Titillium Web', sans-serif;
+color: #000;
+font-size: 12pt;
+}
+
+#contact [type=submit] {
+width: 100px;
+height: 35px;
+font-family: 'Titillium Web', sans-serif;
+color: #000;
+font-size: 12pt;
+}
+
+#contact textarea {
+resize: none;
+font-family: 'Titillium Web', sans-serif;
+color: #000;
+font-size: 12pt;
+}
+
+
+#contact p {
+padding-top: 10px;
+font-family: 'Titillium Web', sans-serif;
+color: #FFF;
+font-size: 12pt;
+}
+
+#contact h4 {
+font-family: 'Titillium Web', sans-serif;
+color: #FFF;
+font-size: 16pt;
+text-transform: uppercase;
+padding-top: 6px;
+}
+
+#about ul {
+margin-top: -10px;
+padding-left: 5%;
+font-family: 'Titillium Web', sans-serif;
+color: #FFF;
+font-size: 12pt;
+text-transform: uppercase;
+}
+
+#about li {
+list-style-image: url(../images/bullet.gif);
+}

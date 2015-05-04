@@ -414,3 +414,96 @@ a.link {
     margin-bottom: -5px;
     display: none;
 }
+
+.proizvodi_table {
+    border: 1px solid #FFF;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18px;
+}
+
+    .proizvodi_table tr {
+        border: 1px solid #FFF;
+    }
+
+    .proizvodi_table td {
+        border: 1px solid #FFF;
+        text-align: center;
+        font-family: 'Titillium Web', sans-serif;
+        color: #FFF;
+        font-size: 12pt;
+    }
+
+    .proizvodi_table caption {
+        font-family: 'Titillium Web', sans-serif;
+        color: #FFF;
+        font-size: 18pt;
+        border: 1px solid #FFF;
+    }
+
+    .proizvodi_table th {
+        font-family: 'Titillium Web', sans-serif;
+        color: #FFF;
+        font-size: 12pt;
+        text-transform: uppercase;
+        border: 1px solid #FFF;
+        width: 25%;
+    }
+
+.add {
+    margin-top: 15px;
+    margin-left: 49%;
+}
+
+#products {
+    display: none;
+}
+
+    #products h1 {
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 24pt;
+        color: #fff;
+        text-transform: uppercase;
+        padding-top: 18px;
+        padding-bottom: 10px;
+        margin-left: 0 !important;
+    }
+
+    #products [type=text] {
+        width: 200px;
+        height: 30px;
+        font-family: 'Titillium Web', sans-serif;
+        color: #000;
+        font-size: 12pt;
+    }
+
+    #products [type=submit] {
+        width: 100px;
+        height: 35px;
+        font-family: 'Titillium Web', sans-serif;
+        color: #000;
+        font-size: 12pt;
+        z-index: 1;
+        margin-bottom: -30px;
+    }
+
+    #products p {
+        padding-top: 10px;
+        font-family: 'Titillium Web', sans-serif;
+        color: #FFF;
+        font-size: 12pt;
+    }
+
+    #products h4 {
+        font-family: 'Titillium Web', sans-serif;
+        color: #FFF;
+        font-size: 16pt;
+        text-transform: uppercase;
+        padding-top: 10px;
+    }
+
+    #products h6 {
+        font-family: 'Titillium Web', sans-serif;
+        color: #FFF;
+        font-size: 6pt;
+    }

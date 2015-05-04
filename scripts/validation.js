@@ -48,7 +48,7 @@ function serviceValidation(opcina, mjesto) {
                 return true
         }
     }
-    request.open("GET", "http://zamger.etf.unsa.ba/wt/mjesto_opcina.php?opcina=" + opcina + "&mjesto=" + mjesto, false)
+    request.open("GET", "http://zamger.etf.unsa.ba/wt/mjesto_opcina.php?opcina=" + opcina + "&mjesto=" + mjesto, true)
     request.send()
 }
 

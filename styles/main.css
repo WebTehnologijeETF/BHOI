@@ -143,12 +143,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     #main_wrapper h1 {
         font-family: 'Titillium Web', sans-serif;
         font-size: 32pt;
-        text-transform: uppercase;
         padding-top: 18px;
         margin-left: 12.8%;
     }
 
-#news, #contests, #projects, #gallery, #about, #contact {
+#news, #contests, #projects, #gallery, #about, #contact, #read_news {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -182,6 +181,20 @@ a.more {
         color: #0F4B95;
     }
 
+img.cover {
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 20px;
+}
+
+h1.title {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 32pt;
+    padding-top: 10px;
+    float: left;
+    margin-left: 0 !important;
+}
+
 h2.title {
     font-family: 'Titillium Web', sans-serif;
     font-size: 22pt;
@@ -195,6 +208,14 @@ h3.author {
     color: #0F4B95;
     float: right;
     margin-top: 16px;
+}
+
+h4.author {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 12pt;
+    color: #0F4B95;
+    float: right;
+    margin-top: 50px;
 }
 
 p.text {
@@ -409,10 +430,9 @@ a.link {
             color: #0F4B95;
         }
 
-#website {
+.website {
     padding-top: 20px;
     margin-bottom: -5px;
-    display: none;
 }
 
 .proizvodi_table {

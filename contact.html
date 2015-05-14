@@ -8,6 +8,7 @@
     </p>
     <h4>Kontaktirajte nas putem WEB obrasca</h4>
     <p>Polja označena sa * su obavezna</p>
+    <form action="contact.php" method="post">
     <p>
         Ime: *<br>
         <input type="text" id="ime"><img src="images/error.png" id="err1" class="error1" alt="Error" title="Polje je prazno ili sadrži nedozvoljene znakove">
@@ -43,6 +44,7 @@
         <br>
         <input type="submit" value="Pošalji" onclick="return validation()">
     </p>
+    </form>
     <p class="status" id="status">
         Poruka uspješno poslana!
     </p>

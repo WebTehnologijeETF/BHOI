@@ -88,3 +88,14 @@ function editProduct(id1, naziv1, opis1, slika1, cijena1) {
     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
     request.send("akcija=promjena&proizvod=" + JSON.stringify(proizvod))
 }
+
+function readNews(news) {
+    var request = new XMLHttpRequest()
+    request.onreadystatechange = function () {
+        if (request.readyState == 4 && request.status == 200)
+            document.getElementById("main_wrapper").innerHTML = request.responseText
+    }
+    request.open("POST", "news.php", true)
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+    request.send("vijest=" + JSON.stringify(news))
+}

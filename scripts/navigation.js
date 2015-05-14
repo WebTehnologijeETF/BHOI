@@ -6,16 +6,16 @@ function loadNewPage(page) {
     request.onreadystatechange = function () {
         if (request.readyState === 4 && request.status === 200) {
             document.getElementById("main_wrapper").innerHTML = request.responseText
-            if (page === 'about')
+            if (page === 'about.html')
                 populateTable()
         }
     }
-    request.open("GET", page + ".html", true)
+    request.open("GET", page, true)
     request.send()
 }
 
 window.onload = function () {
-    loadNewPage('news')
+    loadNewPage('news.php')
 }
 
 function addProducts() {

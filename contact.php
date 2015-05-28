@@ -1,4 +1,4 @@
-<!DOCTYPE HTML SYSTEM>
+Ôªø<!DOCTYPE HTML SYSTEM>
 <html>
 	<head>
 		<meta http-equiv="ContentType" content="text/html; charset=utf-8">
@@ -56,7 +56,7 @@
 			if(!validateName($imeIPrezime))
 			{
 				$valid = false;
-				$err1p = '<img src="images/error.png" class="error1" style="display: inline;" title="Polje je prazno ili sadrûi nedozvoljene znakove">';
+				$err1p = '<img src="images/error.png" class="error1" style="display: inline;" title="Polje je prazno ili sadr≈æi nedozvoljene znakove">';
 			}
 			if(!preg_match("/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]/i", $emailAdresa))
 			{
@@ -67,7 +67,7 @@
 			{
 				$valid = false;
 				$websiteurl = '';
-				$err3p = '<img src="images/error.png" class="error1" style="display: inline;" title="Sadrûaj padajuÊeg izbornika je ureivan">';
+				$err3p = '<img src="images/error.png" class="error1" style="display: inline;" title="Sadr≈æaj padaju√¶eg izbornika je ure√∞ivan">';
 			}
 			else
 			{
@@ -97,12 +97,12 @@
 			if($valid)
 			{
 				$displayCheck = 'block';
-				$header = "Ako ste pogreöno popunili formu, moûete ispod prepraviti unesene podatke";
+				$header = "Ako ste pogre≈°no popunili formu, mo≈æete ispod prepraviti unesene podatke";
 			}
 		}
 		if(isset($_POST["sure"]))
 		{
-			$header = "Ako ste pogreöno popunili formu, moûete ispod prepraviti unesene podatke";
+			$header = "Ako ste pogre≈°no popunili formu, mo≈æete ispod prepraviti unesene podatke";
 			$imeIPrezime = $_POST["imeIPrezimeH"];
 			$emailAdresa = $_POST["emailH"];
 			$opcina = $_POST["opcinaH"];
@@ -120,7 +120,7 @@
 			$email = new SendGrid\Email();
 			$email->addTo("amehanovic1@etf.unsa.ba")->addCc("vljubovic@etf.unsa.ba")->setFrom($emailAdresa)->setSubject("BHOI - Kontakt obrazac")->setText($poruka);
 			$sendgrid->send($email);
-			echo '<script>alert("Zahvaljujemo se öto ste nas kontaktirali")</script>';
+			print '<script>alert("Zahvaljujemo se ≈°to ste nas kontaktirali")</script>';
 		}
 	?>
 	<body>
@@ -129,12 +129,13 @@
 				<div id="menu">
 					<img src="images/Logo.png" alt="Logo">
 					<ul>
-						<li><a onclick="loadNewPage('news.php')">PoËetna</a></li>
-						<li><a onclick="loadNewPage('contests.html')">TakmiËenja</a></li>
+						<li><a onclick="loadNewPage('news.php')">Poƒçetna</a></li>
+						<li><a onclick="loadNewPage('contests.html')">Takmiƒçenja</a></li>
 						<li><a onclick="loadNewPage('projects.html')">Projekti</a></li>
 						<li><a onclick="loadNewPage('gallery.html')">Galerija</a></li>
 						<li><a onclick="loadNewPage('about.html')">O&nbsp;nama</a></li>
 						<li><a href="contact.php">Kontakt</a></li>
+						<li><a href="admin.php">Admin</a></li>
 					</ul>
 				</div>
 			</div>
@@ -148,71 +149,71 @@
 				Email: email@email.com<br>
 				Adresa: Ulica Zmaja od Bosne b.b., 71000 Sarajevo, Bosna i Hercegovina<br>
 				</p>
-				<div id="provjera" style="display: <?php echo $displayCheck; ?>">
+				<div id="provjera" style="display: <?php print $displayCheck; ?>">
 					<form method="post">
-						<input type="hidden" name="imeIPrezimeH" value="<?php echo $imeIPrezime; ?>">
-						<input type="hidden" name="emailH" value="<?php echo $emailAdresa; ?>">
-						<input type="hidden" name="opcinaH" value="<?php echo $opcina; ?>">
-						<input type="hidden" name="mjestoH" value="<?php echo $mjesto; ?>">
-						<input type="hidden" name="websiteURLH" value="<?php echo $websiteurl; ?>">
-						<input type="hidden" name="porukaH" value="<?php echo $poruka; ?>">
-						<input type="hidden" name="porukaH" value="<?php echo $poruka; ?>">
-						<input type="hidden" name="selected1H" value="<?php echo $selected1; ?>">
-						<input type="hidden" name="selected2H" value="<?php echo $selected2; ?>">
-						<input type="hidden" name="displayWebsiteH" value="<?php echo $displayWebsite; ?>">
-						<input type="hidden" name="displayCheckH" value="<?php echo $displayCheck; ?>">
+						<input type="hidden" name="imeIPrezimeH" value="<?php print $imeIPrezime; ?>">
+						<input type="hidden" name="emailH" value="<?php print $emailAdresa; ?>">
+						<input type="hidden" name="opcinaH" value="<?php print $opcina; ?>">
+						<input type="hidden" name="mjestoH" value="<?php print $mjesto; ?>">
+						<input type="hidden" name="websiteURLH" value="<?php print $websiteurl; ?>">
+						<input type="hidden" name="porukaH" value="<?php print $poruka; ?>">
+						<input type="hidden" name="porukaH" value="<?php print $poruka; ?>">
+						<input type="hidden" name="selected1H" value="<?php print $selected1; ?>">
+						<input type="hidden" name="selected2H" value="<?php print $selected2; ?>">
+						<input type="hidden" name="displayWebsiteH" value="<?php print $displayWebsite; ?>">
+						<input type="hidden" name="displayCheckH" value="<?php print $displayCheck; ?>">
 						<h4>Provjerite da li ste ispravno popunili kontakt formu</h4>
 						<p>
 						<?php 
-							echo "Ime i prezime: ".$imeIPrezime."<br>";
-							echo "Email: ".$emailAdresa."<br>";
-							echo "OpÊina: ".$opcina."<br>";
-							echo "Mjesto: ".$mjesto."<br>";
-							echo "Website URL: ".$websiteurl."<br>";
-							echo "Poruka: ".$poruka."<br>";
+							print "Ime i prezime: ".$imeIPrezime."<br>";
+							print "Email: ".$emailAdresa."<br>";
+							print "Op√¶ina: ".$opcina."<br>";
+							print "Mjesto: ".$mjesto."<br>";
+							print "Website URL: ".$websiteurl."<br>";
+							print "Poruka: ".$poruka."<br>";
 						?>
 						</p>
-						<h4>Da li ste sigurni da ûelite poslati ove podatke?</h4>
-						<button name="sure" type="submit" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">Siguran&nbsp;sam</button>
+						<h4>Da li ste sigurni da ≈æelite poslati ove podatke?</h4>
+						<button name="sure" type="submit" action="<?php print htmlspecialchars($_SERVER["PHP_SELF"]);?>">Siguran&nbsp;sam</button>
 					</form>
 				</div>
-				<h4><?php echo $header; ?></h4>
-				<p>Polja oznaËena sa * su obavezna</p>
-				<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+				<h4><?php print $header; ?></h4>
+				<p>Polja oznaƒçena sa * su obavezna</p>
+				<form method="post" action="<?php print htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 					<p>
 					Ime i prezime: *<br>
-					<input type="text" name="imeIPrezime" value="<?php echo $imeIPrezime; ?>"><?php echo $err1p; ?>
+					<input type="text" name="imeIPrezime" value="<?php print $imeIPrezime; ?>"><?php print $err1p; ?>
 					<br>
 					<br>
 					Email: *<br>
-					<input type="text" name="email" value="<?php echo $emailAdresa; ?>"><?php echo $err2p; ?>
+					<input type="text" name="email" value="<?php print $emailAdresa; ?>"><?php print $err2p; ?>
 					<br>
 					<br>
-					OpÊina:<br>
-					<input type="text" name="opcina" value="<?php echo $opcina; ?>">
+					Op√¶ina:<br>
+					<input type="text" name="opcina" value="<?php print $opcina; ?>">
 					<br>
 					<br>
 					Mjesto:<br>
-					<input type="text" name="mjesto" value="<?php echo $mjesto; ?>">
+					<input type="text" name="mjesto" value="<?php print $mjesto; ?>">
 					<br>
 					<br>
 					Imate li website?<br>
-					<select name="ddl" id="ddl" onchange="return update()"><?php echo $err3p; ?>
-						<option value="Ne" <?php echo $selected1; ?> >Ne</option>
-						<option value="Da" <?php echo $selected2; ?> >Da</option>
+					<select name="ddl" id="ddl" onchange="return update()"><?php print $err3p; ?>
+						<option value="Ne" <?php print $selected1; ?> >Ne</option>
+						<option value="Da" <?php print $selected2; ?> >Da</option>
 					</select>
 					<br>
 					</p>
-					<div id="website" style="display:<?php echo $displayWebsite; ?>;">
+					<div id="website" style="display:<?php print $displayWebsite; ?>;">
 						<p>Website URL: *</p>
-						<input type="text" name="websiteURL" value="<?php echo $websiteurl; ?>"><?php echo $err4p; ?>
+						<input type="text" name="websiteURL" value="<?php print $websiteurl; ?>"><?php print $err4p; ?>
 					</div>
 					<p>
 					<br>
 					Poruka: *<br>
-					<textarea rows="10" cols="80" name="message"><?php echo $poruka; ?></textarea><?php echo $err5p; ?><br>
+					<textarea rows="10" cols="80" name="message"><?php print $poruka; ?></textarea><?php print $err5p; ?><br>
 					<br>
-					<button name="send" type="submit">Poöalji</button>
+					<button name="send" type="submit">Po≈°alji</button>
 					<button name="reset" type="submit">Resetuj</button>
 					</p>
 				</form>
@@ -237,7 +238,7 @@
 			<img src="images/MercLogo.png" alt="Logo7"></a>
 		</div>
 		<div id="footer">
-			<h1>COPYRIGHT © BHOI 2015</h1>
+			<h1>COPYRIGHT ¬© BHOI 2015</h1>
 		</div>
 	</body>
 </html>

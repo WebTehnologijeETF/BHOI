@@ -24,3 +24,14 @@ function ddl2(id, tekst) {
         tekst.innerHTML = '+' + tekst.innerHTML.substr(1)
     }
 }
+
+function showComments(tekst) {
+    if (tekst.innerHTML[0] === '+') {
+        document.getElementById("comments").style.display = "block"
+        tekst.innerHTML = '-' + tekst.innerHTML.substr(1)
+    }
+    else {
+        document.getElementById("comments").style.display = "none"
+        tekst.innerHTML = '+' + tekst.innerHTML.substr(1)
+    }
+}

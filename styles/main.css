@@ -128,7 +128,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         display: none;
     }
 
-#main_wrapper {
+#main_wrapper, #form_body {
     background-clip: border-box;
     background-color: #000;
     background-image: url(../images/latest.png);
@@ -147,7 +147,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         margin-left: 12.8%;
     }
 
-#news, #contests, #projects, #gallery, #about, #contact, #read_news {
+#news, #contests, #projects, #gallery, #about, #contact, #read_news, #admin, #form {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -178,6 +178,17 @@ a.more {
 }
 
     a.more:hover {
+        color: #0F4B95;
+    }
+
+a.comments {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 14pt;
+    text-transform: uppercase;
+    color: #FFCC33;
+}
+
+    a.comments:hover {
         color: #0F4B95;
     }
 
@@ -260,18 +271,18 @@ p.text {
         padding: 20px;
     }
 
-#contests table {
+#contests table, #admin table, #form table {
     border: 1px solid #FFF;
     margin-left: auto;
     margin-right: auto;
     margin-top: 18px;
 }
 
-    #contests table tr {
+    #contests table tr, #admin table tr, #form table tr {
         border: 1px solid #FFF;
     }
 
-    #contests table td {
+    #contests table td, #admin table td, #form table td {
         border: 1px solid #FFF;
         text-align: center;
         font-family: 'Titillium Web', sans-serif;
@@ -286,7 +297,7 @@ p.text {
         border: 1px solid #FFF;
     }
 
-    #contests table th {
+    #contests table th, #admin table th, #form table th {
         font-family: 'Titillium Web', sans-serif;
         color: #FFF;
         font-size: 12pt;
@@ -312,7 +323,7 @@ a.link {
     padding-bottom: 20px;
 }
 
-#gallery p, #about p {
+#gallery p, #about p, #comments p {
     font-family: 'Titillium Web', sans-serif;
     color: #FFF;
     font-size: 12pt;
@@ -321,7 +332,90 @@ a.link {
     padding-bottom: 32px;
 }
 
+#comments p {
+    font-family: 'Titillium Web', sans-serif;
+    color: #FFF;
+    font-size: 12pt;
+    text-align: justify;
+    padding: 0;
+}
+
+#comments a {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 12pt;
+    color: #FFCC33;
+}
+
+    #comments a:hover {
+        color: #0F4B95;
+    }
+
+#admin [type=text] {
+    width: 200px;
+    height: 30px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #000;
+    font-size: 12pt;
+}
+
+#admin [type=submit] {
+    width: 100px;
+    height: 35px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #000;
+    font-size: 12pt;
+    z-index: 1;
+}
+
+#admin [type=password] {
+    width: 200px;
+    height: 30px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #000;
+    font-size: 12pt;
+}
+    
+#form [type=text] {
+    width: 200px;
+    height: 30px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #000;
+    font-size: 12pt;
+}
+
+#form [type=submit] {
+    width: 100px;
+    height: 35px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #000;
+    font-size: 12pt;
+    z-index: 1;
+}
+
+#form [type=password] {
+    width: 200px;
+    height: 30px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #000;
+    font-size: 12pt;
+}
+
+#form textarea {
+    resize: none;
+    font-family: 'Titillium Web', sans-serif;
+    color: #000;
+    font-size: 12pt;
+}
+
 #contact [type=text] {
+    width: 200px;
+    height: 30px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #000;
+    font-size: 12pt;
+}
+
+#contact [type=password] {
     width: 200px;
     height: 30px;
     font-family: 'Titillium Web', sans-serif;
@@ -351,14 +445,14 @@ a.link {
     font-size: 12pt;
 }
 
-#contact p {
+#contact p, #form p, #admin p {
     padding-top: 10px;
     font-family: 'Titillium Web', sans-serif;
     color: #FFF;
     font-size: 12pt;
 }
 
-#contact h4 {
+#contact h4, #form h4, #admin h4  {
     font-family: 'Titillium Web', sans-serif;
     color: #FFF;
     font-size: 16pt;
@@ -366,7 +460,7 @@ a.link {
     padding-top: 10px;
 }
 
-#contact h6 {
+#contact h6, #form h6, #admin h6  {
     font-family: 'Titillium Web', sans-serif;
     color: #FFF;
     font-size: 6pt;

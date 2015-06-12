@@ -8,6 +8,12 @@ function loadNewPage(page) {
             document.getElementById("main_wrapper").innerHTML = request.responseText
             if (page === 'about.html')
                 populateTable()
+            if (page === 'news.html') {
+                fetchNewsAndComments()
+                setInterval(function () {
+                    fetchNewsAndComments()
+                }, 15000)
+            }
         }
     }
     request.open("GET", page, true)

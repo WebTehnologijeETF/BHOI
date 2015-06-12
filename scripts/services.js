@@ -89,12 +89,35 @@ function editProduct(id1, naziv1, opis1, slika1, cijena1) {
     request.send("akcija=promjena&proizvod=" + JSON.stringify(proizvod))
 }
 
-function readNews(id) {
-    var request = new XMLHttpRequest()
+function send() {
+    imePrezime = document.getElementById("imePrezimek").value
+    email = document.getElementById("emailk").value
+    poruka = document.getElementById("messagek").value
+    request = new XMLHttpRequest()
     request.onreadystatechange = function () {
-        if (request.readyState == 4 && request.status == 200)
-            document.getElementById("main_wrapper").innerHTML = request.responseText
+        if (request.readyState == 4 && request.status == 200) {
+            result = request.responseText
+            if (result == "Zahvaljujemo se što ste nas kontaktirali!")
+                alert(result)
+            else
+                alert("Došlo je do greške!")
+        }
     }
-    request.open("GET", "news.php?id=" + id, true)
-    request.send()
+    request.open("POST", "php/send_email.php", true)
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+    request.send("email=" + email + "&poruka=" + poruka)
+}
+
+function reset() {
+    document.getElementById("provjera").style.display = "none"
+    document.getElementById("errk1").style.display = "none"
+    document.getElementById("errk2").style.display = "none"
+    document.getElementById("errk3").style.display = "none"
+    document.getElementById("errk4").style.display = "none"
+    document.getElementById("imePrezimek").value = ""
+    document.getElementById("emailk").value = ""
+    document.getElementById("websiteURLk").value = ""
+    document.getElementById("messagek").value = ""
+    document.getElementById("opcina").value = ""
+    document.getElementById("mjesto").value = ""
 }

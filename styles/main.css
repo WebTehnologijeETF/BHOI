@@ -157,6 +157,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     #news table {
         width: 95%;
         margin-left: 2.5%;
+        table-layout:fixed;
     }
 
         #news table td {
@@ -182,10 +183,12 @@ a.more {
     }
 
 a.comments {
+    float: left;
     font-family: 'Titillium Web', sans-serif;
     font-size: 14pt;
     text-transform: uppercase;
     color: #FFCC33;
+    margin-top: 10px;
 }
 
     a.comments:hover {
@@ -332,7 +335,7 @@ a.link {
     padding-bottom: 32px;
 }
 
-#comments p {
+div.comments p {
     font-family: 'Titillium Web', sans-serif;
     color: #FFF;
     font-size: 12pt;
@@ -340,13 +343,13 @@ a.link {
     padding: 0;
 }
 
-#comments a {
+div.comments a {
     font-family: 'Titillium Web', sans-serif;
     font-size: 12pt;
     color: #FFCC33;
 }
 
-    #comments a:hover {
+    div.comments a:hover {
         color: #0F4B95;
     }
 
@@ -445,6 +448,30 @@ a.link {
     font-size: 12pt;
 }
 
+div.comments [type=text] {
+    width: 200px;
+    height: 30px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #000;
+    font-size: 12pt;
+}
+
+div.comments [type=submit] {
+    width: 100px;
+    height: 35px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #000;
+    font-size: 12pt;
+    z-index: 1;
+}
+
+div.comments textarea {
+    resize: none;
+    font-family: 'Titillium Web', sans-serif;
+    color: #000;
+    font-size: 12pt;
+}
+
 #contact p, #form p, #admin p {
     padding-top: 10px;
     font-family: 'Titillium Web', sans-serif;
@@ -480,16 +507,16 @@ a.link {
 }
 
 .error1 {
-    width: 25px;
-    height: 25px;
+    width: 25px !important;
+    height: 25px !important;
     padding-left: 5px;
     margin-bottom: -6px;
     display: none;
 }
 
 .error2 {
-    width: 25px;
-    height: 25px;
+    width: 25px !important;
+    height: 25px !important;
     padding-left: 5px;
     display: none;
 }
@@ -621,3 +648,7 @@ a.link {
         color: #FFF;
         font-size: 6pt;
     }
+
+#website, #provjera {
+    display: none;
+}

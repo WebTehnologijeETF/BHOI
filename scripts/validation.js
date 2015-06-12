@@ -37,58 +37,40 @@ function priceValidation(price) {//Validacija zasnovana na Regex-u
     return regex.test(price)
 }
 
-function serviceValidation(opcina, mjesto) {
+function validateContactForm() {
+    document.getElementById("errk1").style.display = "none"
+    document.getElementById("errk2").style.display = "none"
+    document.getElementById("errk3").style.display = "none"
+    document.getElementById("errk4").style.display = "none"
+    imePrezime = document.getElementById("imePrezimek").value
+    email = document.getElementById("emailk").value
+    website = "?"
+    if (document.getElementById("ddl").selectedIndex === 1)
+        website = document.getElementById("websiteURLk").value
+    poruka = document.getElementById("messagek").value
     request = new XMLHttpRequest()
     request.onreadystatechange = function () {
-        if (request.status === 200 & request.readyState === 4) {
-            var response = JSON.parse(request.responseText)
-            if (Object.keys(response)[0] == 'error')
-                return false
-            else
-                return true
+        if (request.readyState == 4 && request.status == 200) {
+            result = request.responseText
+            if (result[0] == "0")
+                document.getElementById("errk1").style.display = "inline"
+            if (result[1] == "0")
+                document.getElementById("errk2").style.display = "inline"
+            if (result[2] == "0")
+                document.getElementById("errk3").style.display = "inline"
+            if (result[3] == "0")
+                document.getElementById("errk4").style.display = "inline"
+            if (result == "1111") {
+                if (website == "?")
+                    website = ""
+                document.getElementById("provjera").innerHTML = "<h4>Provjerite da li ste ispravno popunili kontakt formu</h4><p>Ime i prezime: " + imePrezime + "<br>Email: " + email + "<br>Općina: " + document.getElementById("opcina").value + "<br>Mjesto: " + document.getElementById("mjesto").value + "<br>Website URL: " + website + "<br>Poruka: " + poruka + "<br></p><h4>Da li ste sigurni da želite poslati ove podatke?</h4><input type=\"submit\" value=\"Siguran sam\" onclick='send()'>"
+                document.getElementById("provjera").style.display = "block"
+            }
         }
     }
-    request.open("GET", "http://zamger.etf.unsa.ba/wt/mjesto_opcina.php?opcina=" + opcina + "&mjesto=" + mjesto, true)
-    request.send()
-}
-
-function validation() {
-    document.getElementById("err1").style.display = "none"
-    document.getElementById("err2").style.display = "none"
-    document.getElementById("err3").style.display = "none"
-    document.getElementById("err4").style.display = "none"
-    document.getElementById("err5").style.display = "none"
-    document.getElementById("err6").style.display = "none"
-    document.getElementById("status").style.display = "none"
-    var passed = true
-    if (!nameValidation(document.getElementById("ime").value)) {
-        passed = false
-        document.getElementById("err1").style.display = "inline"
-    }
-    if (!emailValidation(document.getElementById("email").value)) {
-        passed = false
-        document.getElementById("err2").style.display = "inline"
-    }
-    if (document.getElementById("ddl").selectedIndex === 1)
-        if (!websiteValidation(document.getElementById("websiteURL").value)) {
-            passed = false
-            document.getElementById("err3").style.display = "inline"
-        }
-    if (document.getElementById("message").value === "") {
-        passed = false
-        document.getElementById("err4").style.display = "inline"
-    }
-    if (document.getElementById("message").value === "") {
-        passed = false
-        document.getElementById("err4").style.display = "inline"
-    }
-    if (!serviceValidation(document.getElementById("opcina").value, document.getElementById("mjesto").value)) {
-        passed = false
-        document.getElementById("err5").style.display = "inline"
-        document.getElementById("err6").style.display = "inline"
-    }
-    if (passed)
-        document.getElementById("status").style.display = "inline"
+    request.open("POST", "php/validate_contact_form.php", true)
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+    request.send("imePrezime=" + imePrezime + "&email=" + email + "&website=" + website + "&poruka=" + poruka)
 }
 
 function productValidation(parametar) {

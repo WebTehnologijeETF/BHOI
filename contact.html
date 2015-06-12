@@ -6,24 +6,26 @@
         Email: email@email.com<br>
         Adresa: Ulica Zmaja od Bosne b.b., 71000 Sarajevo, Bosna i Hercegovina<br>
     </p>
+    <div id="provjera">
+        			
+	</div>
     <h4>Kontaktirajte nas putem WEB obrasca</h4>
     <p>Polja označena sa * su obavezna</p>
-    <form action="contact.php" method="post">
     <p>
-        Ime: *<br>
-        <input type="text" id="ime"><img src="images/error.png" id="err1" class="error1" alt="Error" title="Polje je prazno ili sadrži nedozvoljene znakove">
+        Ime i prezime: *<br>
+        <input type="text" id="imePrezimek"><img src="images/error.png" id="errk1" class="error1" alt="Error" title="Polje je prazno ili sadrži nedozvoljene znakove">
         <br>
         <br>
         Email: *<br>
-        <input type="text" id="email"><img src="images/error.png" id="err2" class="error1" alt="Error" title="Polje je prazno ili ne predstavlja email adresu">
+        <input type="text" id="emailk"><img src="images/error.png" id="errk2" class="error1" alt="Error" title="Polje je prazno ili ne predstavlja email adresu">
         <br>
         <br>
-        Općina: *<br>
-        <input type="text" id="opcina"><img src="images/error.png" id="err5" class="error1" alt="Error" title="Validacija općine nije u skladu sa korištenim web servisom">
+        Općina:<br>
+        <input type="text" id="opcina">
         <br>
         <br>
-        Mjesto: *<br>
-        <input type="text" id="mjesto"><img src="images/error.png" id="err6" class="error1" alt="Error" title="Validacija mjesta nije u skladu sa korištenim web servisom">
+        Mjesto:<br>
+        <input type="text" id="mjesto">
         <br>
         <br>
         Imate li website?<br>
@@ -35,18 +37,15 @@
     </p>
     <div id="website">
         <p>Website URL: *</p>
-        <input type="text" id="websiteURL"><img src="images/error.png" id="err3" class="error1" alt="Error" title="Polje je prazno ili ne predstavlja website URL">
+        <input type="text" id="websiteURLk"><img src="images/error.png" id="errk3" class="error1" alt="Error" title="Polje je prazno ili ne predstavlja website URL">
     </div>
     <p>
         <br>
         Poruka: *<br>
-        <textarea rows="10" cols="80" id="message"></textarea><img src="images/error.png" id="err4" class="error2" alt="Error" title="Polje je prazno"><br>
+        <textarea rows="10" cols="80" id="messagek"></textarea><img src="images/error.png" id="errk4" class="error2" alt="Error" title="Polje je prazno"><br>
         <br>
-        <input type="submit" value="Pošalji" onclick="return validation()">
-    </p>
-    </form>
-    <p class="status" id="status">
-        Poruka uspješno poslana!
+        <input type="submit" value="Pošalji" onclick="return validateContactForm()">
+        <input type="submit" value="Resetuj" onclick="return reset()">
     </p>
     <br>
     <br>

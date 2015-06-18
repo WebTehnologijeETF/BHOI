@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `bhoi` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_slovenian_ci */;
+﻿CREATE DATABASE  IF NOT EXISTS `bhoi` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_slovenian_ci */;
 USE `bhoi`;
 -- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
 --
@@ -35,7 +35,7 @@ CREATE TABLE `komentari` (
   UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `fkv_idx` (`vijest`),
   CONSTRAINT `fkv` FOREIGN KEY (`vijest`) REFERENCES `vijesti` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,6 @@ CREATE TABLE `komentari` (
 
 LOCK TABLES `komentari` WRITE;
 /*!40000 ALTER TABLE `komentari` DISABLE KEYS */;
-INSERT INTO `komentari` VALUES (16,18,'Petar','','Pozz','2015-05-28 17:48:01'),(18,18,'Stipe','','Pozz','2015-05-28 17:48:14'),(20,18,'Batman','batman@robin.com','Vozdrica','2015-05-28 17:50:27');
 /*!40000 ALTER TABLE `komentari` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -71,7 +70,7 @@ CREATE TABLE `korisnici` (
 
 LOCK TABLES `korisnici` WRITE;
 /*!40000 ALTER TABLE `korisnici` DISABLE KEYS */;
-INSERT INTO `korisnici` VALUES ('Adnan','5f4dcc3b5aa765d61d8327deb882cf99','amehanovic1@etf.unsa.ba'),('Zmaj','86896e0309b1ab54a77cf5a7befc9862','zmaj123@zmaj.domena.ba');
+INSERT INTO `korisnici` VALUES ('amehanovic','5f4dcc3b5aa765d61d8327deb882cf99','amehanovic1@etf.unsa.ba');
 /*!40000 ALTER TABLE `korisnici` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -94,7 +93,7 @@ CREATE TABLE `vijesti` (
   UNIQUE KEY `idvijesti_UNIQUE` (`id`),
   KEY `fka_idx` (`autor`),
   CONSTRAINT `fka` FOREIGN KEY (`autor`) REFERENCES `korisnici` (`korisnickoIme`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -103,7 +102,7 @@ CREATE TABLE `vijesti` (
 
 LOCK TABLES `vijesti` WRITE;
 /*!40000 ALTER TABLE `vijesti` DISABLE KEYS */;
-INSERT INTO `vijesti` VALUES (17,'NOVOST BROJ 1','Adnan','../images/1.jpg','Sada ću napisati neki osnovni tekst.\r\nOvaj osnovni tekst se nalazi u više redova.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.','Sada ću napisati neki osnovni tekst.\r\nOvaj osnovni tekst se nalazi u više redova.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.','2015-05-28 17:45:26'),(18,'NOVOST BROJ 2','Adnan','../images/2.jpg','Sada ću napisati neki osnovni tekst.\r\nOvaj osnovni tekst se nalazi u više redova.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.','Sada ću napisati neki osnovni tekst.\r\nOvaj osnovni tekst se nalazi u više redova.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.','2015-05-28 17:45:40'),(21,'NOVOST BROJ 5','Adnan','','Sada ću napisati neki osnovni tekst.\r\nOvaj osnovni tekst se nalazi u više redova.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.','','2015-05-28 17:46:27'),(22,'NOVOST BROJ 6!','Adnan','../images/6.jpg','Sada ću napisati neki osnovni tekst.\r\nOvaj osnovni tekst se nalazi u više redova.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.\r\nJoš teksta i još teksta i još teksta.','','2015-05-28 17:57:57');
+INSERT INTO `vijesti` VALUES (17,'NOVOST BROJ 1','amehanovic','../images/1.jpg','Uvodni tekst: Novost broj 1 Novost broj 1 Novost broj 1 Novost broj 1 Novost broj 1 Novost broj 1 Novost broj 1 Novost broj 1 Novost broj 1 Novost broj 1','Čitav tekst: Novost broj 1 Novost broj 1 Novost broj 1 Novost broj 1 Novost broj 1 Novost broj 1 Novost broj 1 Novost broj 1 Novost broj 1 Novost broj 1','2015-06-18 01:05:19'),(18,'NOVOST BROJ 2','amehanovic','../images/2.jpg','Uvodni tekst: Novost broj 2 Novost broj 2 Novost broj 2 Novost broj 2 Novost broj 2 Novost broj 2 Novost broj 2 Novost broj 2 Novost broj 2 Novost broj 2','Čitav tekst: Novost broj 2 Novost broj 2 Novost broj 2 Novost broj 2 Novost broj 2 Novost broj 2 Novost broj 2 Novost broj 2 Novost broj 2 Novost broj 2','2015-06-18 01:06:38'),(21,'NOVOST BROJ 5','amehanovic','','Uvodni tekst: Novost broj 5 Novost broj 5 Novost broj 5 Novost broj 5 Novost broj 5 Novost broj 5 Novost broj 5 Novost broj 5 Novost broj 5 Novost broj 5','','2015-06-18 01:10:17'),(22,'NOVOST BROJ 6','amehanovic','../images/6.jpg','Uvodni tekst: Novost broj 6 Novost broj 6 Novost broj 6 Novost broj 6 Novost broj 6 Novost broj 6 Novost broj 6 Novost broj 6 Novost broj 6 Novost broj 6','Čitav tekst: Novost broj 6 Novost broj 6 Novost broj 6 Novost broj 6 Novost broj 6 Novost broj 6 Novost broj 6 Novost broj 6 Novost broj 6 Novost broj 6','2015-06-18 01:09:27'),(23,'NOVOST BROJ 3','amehanovic','../images/3.jpg','Uvodni tekst: Novost broj 3 Novost broj 3 Novost broj 3 Novost broj 3 Novost broj 3 Novost broj 3 Novost broj 3 Novost broj 3 Novost broj 3 Novost broj 3','Čitav tekst: Novost broj 3 Novost broj 3 Novost broj 3 Novost broj 3 Novost broj 3 Novost broj 3 Novost broj 3 Novost broj 3 Novost broj 3 Novost broj 3','2015-06-18 01:07:49'),(24,'NOVOST BROJ 4','amehanovic','../images/4.jpg','Uvodni tekst: Novost broj 4 Novost broj 4 Novost broj 4 Novost broj 4 Novost broj 4 Novost broj 4 Novost broj 4 Novost broj 4 Novost broj 4 Novost broj 4','','2015-06-18 01:10:53');
 /*!40000 ALTER TABLE `vijesti` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -116,4 +115,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-28 20:01:15
+-- Dump completed on 2015-06-18  3:38:18

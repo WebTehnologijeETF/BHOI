@@ -13,7 +13,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 #slideshow {
     background-clip: border-box;
     background-color: #000;
-    background-image: url(../images/slideshow.png);
     background-origin: padding-box;
     background-position: center center;
     background-repeat: no-repeat;
@@ -157,7 +156,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     #news table {
         width: 95%;
         margin-left: 2.5%;
-        table-layout:fixed;
     }
 
         #news table td {
@@ -183,12 +181,10 @@ a.more {
     }
 
 a.comments {
-    float: left;
     font-family: 'Titillium Web', sans-serif;
     font-size: 14pt;
     text-transform: uppercase;
     color: #FFCC33;
-    margin-top: 10px;
 }
 
     a.comments:hover {
@@ -309,6 +305,30 @@ p.text {
         width: 25%;
     }
 
+#gallery table {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18px;
+}
+    #gallery table td {
+        text-align: center;
+        font-family: 'Titillium Web', sans-serif;
+        color: #FFF;
+        font-size: 12pt;
+        padding: 10px;
+    }
+
+#gallery img {
+    width: 320px;
+    height: 190px;
+    border-radius: 10px;
+}
+
+        #gallery img:hover {
+            border: solid 1px white;
+        }
+
 a.link {
     color: #FFCC33;
 }
@@ -335,7 +355,7 @@ a.link {
     padding-bottom: 32px;
 }
 
-div.comments p {
+#comments p {
     font-family: 'Titillium Web', sans-serif;
     color: #FFF;
     font-size: 12pt;
@@ -343,13 +363,13 @@ div.comments p {
     padding: 0;
 }
 
-div.comments a {
+#comments a {
     font-family: 'Titillium Web', sans-serif;
     font-size: 12pt;
     color: #FFCC33;
 }
 
-    div.comments a:hover {
+    #comments a:hover {
         color: #0F4B95;
     }
 
@@ -448,30 +468,6 @@ div.comments a {
     font-size: 12pt;
 }
 
-div.comments [type=text] {
-    width: 200px;
-    height: 30px;
-    font-family: 'Titillium Web', sans-serif;
-    color: #000;
-    font-size: 12pt;
-}
-
-div.comments [type=submit] {
-    width: 100px;
-    height: 35px;
-    font-family: 'Titillium Web', sans-serif;
-    color: #000;
-    font-size: 12pt;
-    z-index: 1;
-}
-
-div.comments textarea {
-    resize: none;
-    font-family: 'Titillium Web', sans-serif;
-    color: #000;
-    font-size: 12pt;
-}
-
 #contact p, #form p, #admin p {
     padding-top: 10px;
     font-family: 'Titillium Web', sans-serif;
@@ -507,16 +503,16 @@ div.comments textarea {
 }
 
 .error1 {
-    width: 25px !important;
-    height: 25px !important;
+    width: 25px;
+    height: 25px;
     padding-left: 5px;
     margin-bottom: -6px;
     display: none;
 }
 
 .error2 {
-    width: 25px !important;
-    height: 25px !important;
+    width: 25px;
+    height: 25px;
     padding-left: 5px;
     display: none;
 }
@@ -648,7 +644,3 @@ div.comments textarea {
         color: #FFF;
         font-size: 6pt;
     }
-
-#website, #provjera {
-    display: none;
-}

@@ -6,10 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	<script src="scripts/dropdown.js" type="text/javascript"></script>
-	<script src="scripts/validation.js" type="text/javascript"></script>
-	<script src="scripts/navigation_contact.js" type="text/javascript"></script>
+	<script src="scripts/slideshow.js" type="text/javascript"></script>
+	<script src="scripts/navigationv2.js" type="text/javascript"></script>
 	<script src="scripts/services.js" type="text/javascript"></script>
-	<script src="scripts/communication.js" type="text/javascript"></script>
 </head>
 <?php
 session_start();
@@ -71,7 +70,7 @@ if(isset($_POST["reset"]))
 		{
 			//Nije realizovano slanje nove šifre na email korisnika. Rješenje koje ne koristi Sendgrid ne radi (nije ga moguce testirati).
 
-			/*require("php/sendgrid-php/sendgrid-php.php");
+			/*require("sendgrid-php/sendgrid-php.php");
 			$service_plan_id = "sendgrid_56d99";
 			$account_info = json_decode(getenv($service_plan_id), true);
 			$sendgrid = new SendGrid("amehanovic1", "woot123.");
@@ -92,12 +91,12 @@ if(isset($_POST["reset"]))
 			<div id="menu">
 				<img src="images/Logo.png" alt="Logo">
 				<ul>
-					<li><a onclick="loadNewPage('news.html')">Početna</a></li>
+					<li><a onclick="loadNewPage('news.php')">Početna</a></li>
 					<li><a onclick="loadNewPage('contests.html')">Takmičenja</a></li>
 					<li><a onclick="loadNewPage('projects.html')">Projekti</a></li>
 					<li><a onclick="loadNewPage('gallery.html')">Galerija</a></li>
 					<li><a onclick="loadNewPage('about.html')">O&nbsp;nama</a></li>
-					<li><a onclick="loadNewPage('contact.html')">Kontakt</a></li>
+					<li><a href="contact.php">Kontakt</a></li>
 					<li><a href="admin.php">Admin</a></li>
 				</ul>
 			</div>

@@ -7,7 +7,6 @@
 		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 		<script src="scripts/dropdown.js" type="text/javascript"></script>
 		<script src="scripts/slideshow.js" type="text/javascript"></script>
-		<script src="scripts/navigationv2.js" type="text/javascript"></script>
 		<script src="scripts/services.js" type="text/javascript"></script>
 	</head>
 	<?php
@@ -168,5 +167,13 @@
 		<div id="footer">
 			<h1>COPYRIGHT © BHOI 2015</h1>
 		</div>
+		<script>
+		window.onload = function () {
+			slideshow()
+			setInterval(function () {
+				slideshow()
+			}, 7000)
+		}
+		</script>
 	</body>
 </html>

@@ -7,7 +7,6 @@
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	<script src="scripts/dropdown.js" type="text/javascript"></script>
 	<script src="scripts/slideshow.js" type="text/javascript"></script>
-	<script src="scripts/navigationv2.js" type="text/javascript"></script>
 	<script src="scripts/services.js" type="text/javascript"></script>
 </head>
 <?php
@@ -24,12 +23,12 @@ function editInputData($data)
 	return $data;
 }
 function generateRandomString($length = 10) {
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyz';
-    $randomString = '';
-    for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[rand(0, 35)];
-    }
-    return $randomString;
+	$characters = '0123456789abcdefghijklmnopqrstuvwxyz';
+	$randomString = '';
+	for ($i = 0; $i < $length; $i++) {
+		$randomString .= $characters[rand(0, 35)];
+	}
+	return $randomString;
 }
 if(isset($_POST["odjava"]))
 { 
@@ -61,11 +60,11 @@ if(isset($_POST["reset"]))
 		$reset2 = $veza -> prepare("update korisnici set sifra = md5(?) where korisnickoIme = ?;");
 		$reset2 -> execute(array($novaSifra, $korisnickoIme));
 		if (!$reset2) 
-			{
-				$greska = $veza -> errorInfo();
-				print "SQL greška: " . $greska[2];
-				exit();
-			}
+		{
+			$greska = $veza -> errorInfo();
+			print "SQL greška: " . $greska[2];
+			exit();
+		}
 		else
 		{
 			//Nije realizovano slanje nove šifre na email korisnika. Rješenje koje ne koristi Sendgrid ne radi (nije ga moguce testirati).
@@ -217,5 +216,13 @@ if(isset($_POST["reset"]))
 							<div id="footer">
 								<h1>COPYRIGHT © BHOI 2015</h1>
 							</div>
+							<script>
+							window.onload = function () {
+								slideshow()
+								setInterval(function () {
+									slideshow()
+								}, 7000)
+							}
+							</script>
 						</body>
 						</html>
